@@ -15,9 +15,10 @@ export function ShoppingCartModal() {
 
   const handleCheckoutCart = async (event : any) => {
     event?.preventDefault()
+    clearCart()
     try {
       const result = await redirectToCheckout();
-      clearCart()
+      
       if(result?.error) {
         console.log('results')
       }
