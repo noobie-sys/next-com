@@ -15,7 +15,6 @@ export function ShoppingCartModal() {
 
   const handleCheckoutCart = async (event : any) => {
     event?.preventDefault()
-    clearCart()
     try {
       const result = await redirectToCheckout();
       
@@ -25,6 +24,7 @@ export function ShoppingCartModal() {
     } catch (error) {
       console.log({message : error})
     }
+    clearCart()
   }
   return (
     <Sheet open={shouldDisplayCart} onOpenChange={handleCartClick} >
