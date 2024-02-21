@@ -21,10 +21,10 @@ export function ShoppingCartModal() {
       if(result?.error) {
         console.log('results')
       }
+      clearCart()
     } catch (error) {
       console.log({message : error})
     }
-    clearCart()
   }
   return (
     <Sheet open={shouldDisplayCart} onOpenChange={handleCartClick} >
