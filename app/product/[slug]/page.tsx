@@ -21,6 +21,7 @@ const getData = async (slug: string) => {
   const response = await client.fetch(query);
   return response;
 };
+export const dynamic = 'force-dynamic'
 
 const SingleProductPage = async ({ params }: { params: { slug: string } }) => {
   // const params = usePathname()

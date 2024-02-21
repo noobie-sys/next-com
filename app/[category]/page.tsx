@@ -6,6 +6,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
+
+export const dynamic = 'force-dynamic'
+
 const getData = async(category : string) => {
     const query = `*[_type == 'product' && category->name == "${category}"]{
         _id,
