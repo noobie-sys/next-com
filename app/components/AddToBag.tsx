@@ -22,7 +22,7 @@ const AddToBag = ({name , description , price , currency , image , price_id} : P
         price : price,
         currency : currency,
         image : urlFor(image).url(),
-        id : price_id
+        price_id : price_id
     }
   return (
     <Button onClick={() => {addItem(product) , handleCartClick()}}>
